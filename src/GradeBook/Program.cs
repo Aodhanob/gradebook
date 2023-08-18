@@ -11,17 +11,11 @@ namespace GradeBook
         static void Main(string[] args)
         {
 
-            List<double> grades = new List<double>() { 12.7, 10.3, 6.11, 4.1 };
-            grades.Add(56.1);
-
-            var result = 0.0;
-            foreach (var number in grades)
-            {
-                result += number;
-            }
-            result /= grades.Count;
-
-            Console.WriteLine($"The average grade is: {result:N2}");
+            var book = new Book("Aodhan's Grade Book"); // Instanctiating Book obj
+            book.addGrade(89.1);
+            book.addGrade(90.5);
+            book.addGrade(77.5);
+            book.showStats();
         }
     }
 }
